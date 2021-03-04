@@ -9,7 +9,7 @@ devtools::install_github("suleimank/bmsr")
 ```
 
 ## Reference Manual
-The repository has the R-package [Reference Manual](https://github.com/suleimank/bmsr-code/bmsr_1.0.0.pdf).
+The repository has the R-package [Reference Manual](https://github.com/suleimank/bmsr/blob/master/bmsr_1.0.0.pdf).
 
 ## Demo
 To run demo of Bayesian multi-source regression on simulated data, execute the following in R:
