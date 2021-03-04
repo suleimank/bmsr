@@ -64,6 +64,7 @@ To access a stand-alone repository with raw STAN and R source code, browse the [
 
 ## Citation
 Cite as: 
+
 Brian S. White, Suleiman A. Khan, Mike J Mason, Muhammad Ammad-ud-din, Swapnil Potdar, Disha Malani, Heikki Kuusanmäki, Brian J. Druker, Caroline A Heckman, Olli Kallioniemi, Stephen E Kurtz, Kimmo Porkka, Cristina E. Tognon, Jeffrey W. Tyner, Tero Aittokallio, Krister Wennerberg, Justin Guinney,
 _Bayesian multi-source regression and monocyte-associated gene expression predict BCL-2 inhibitor resistance in acute myeloid leukemia_,
 To Appear, (2021)
@@ -71,8 +72,11 @@ To Appear, (2021)
 
 ## FAQ
 1. Do I need to compile the stan code after installation?
+
 No, the stan-code is compiled during package installation automatically. You do not need to compile it.
+
 1. How long does it takes to run?
+
 The run-time depends on the data-size and number of sampling iterations you run. The demo_bmsr should run in 2-3 minutes depending on the machine.
 
 
