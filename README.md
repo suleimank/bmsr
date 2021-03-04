@@ -73,10 +73,10 @@ To Appear, (2021)
 ## FAQ
 1. Do I need to compile the stan code after installation?
 
-No, the stan-code is compiled during package installation automatically. You do not need to compile it.
+	No, the stan-code is compiled during package installation automatically. You do not need to compile it.
 
-1. How long does it takes to run?
+2. How long does it takes to run?
 
-The run-time depends on the data-size and number of sampling iterations you run. The demo_bmsr should run in 2-3 minutes depending on the machine.
+	The run-time depends on the data-size and number of sampling iterations you run. The demo_bmsr should run in 2-3 minutes depending on the machine.
 
 
