@@ -9,9 +9,11 @@ require("rstan")
 #' @param file is the stan file containing the stan code.
 #' @param data is a list containing the data in the format this stan code accepts.
 #' @param opts a list containing opts to run the model:
+#' \itemize{
 #'  \item{iter}{integer identifies number of sampling iterations,}
 #'  \item{seeds}{vector of integers identifying seeds for running the method,}
 #'  \item{inference}{string identifying the sampling method to use, either of Sampling or VB.}
+#' }
 #' @return A list containing the following elements:
 #'  \item{out}{STAN output variable,}
 #'  \item{runtime}{run time of the code.}

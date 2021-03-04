@@ -12,9 +12,11 @@ runSTAN(file, data, opts)
 \item{data}{is a list containing the data in the format this stan code accepts.}
 
 \item{opts}{a list containing opts to run the model:
+\itemize{
 \item{iter}{integer identifies number of sampling iterations,}
 \item{seeds}{vector of integers identifying seeds for running the method,}
-\item{inference}{string identifying the sampling method to use, either of Sampling or VB.}}
+\item{inference}{string identifying the sampling method to use, either of Sampling or VB.}
+}}
 }
 \value{
 A list containing the following elements:
