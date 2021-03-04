@@ -17,6 +17,7 @@ To run demo of Bayesian multi-source regression on simulated data, execute the f
 ``` r
 demo('demo_bmsr')
 ```
+![demo bmsr features](/images/demo_bmsr.png)
 
 To run demo of Bayesian multi-task regression on simulated data, execute the following in R:
 
