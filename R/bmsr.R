@@ -87,10 +87,12 @@ predictSTAN <- function(predFunction,out,xTest,nTest,yN=NULL){
 #'
 #' @param xTest.S is a matrix of test data for predicting the outcome.
 #' @param beta is model parameter vector.
-#' @param W are model parameters. If NULL, model is single/task, else multi/task.
+#' @param W are model parameters. If NULL, model is single-task, else multi-task.
 #' @param yN a list containing values used for normalizing the data: (default = NULL).
+#' \itemize{
 #'  \item{cm}{vector of means with which the data is centered (0's if data is not centered),}
 #'  \item{cs}{vector of standard deviations with which the data is scaled (1's if data is not scaled).}
+#'  }
 #' @return yPred prediction vector of the stan model.
 #' @keywords internal
 pred <- function(xTest.S,beta,W,yN=NULL)
