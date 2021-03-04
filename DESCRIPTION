@@ -1,0 +1,36 @@
+Package: bmsr
+Type: Package
+Title: Bayesian multi-source regression
+Version: 1.0.0
+Authors@R: 
+    c(person("Suleiman A.","Khan",
+           role = c("aut", "cre"),
+           email = "khan.suleiman@gmail.com"),
+    person("Brian","White",
+           role = "aut"))
+Author: Suleiman A. Khan [aut, cre], Brian Whtie [aut]
+Maintainer: Suleiman A. Khan <khan.suleiman@gmail.com>
+Description: The bmsr package implements joint regression from multiple data sources in a Bayesian framework. The package provides implementation for both single-task and multi-task regression. The model is implemented using STAN and interface is provided using R programming language. Options for training the model using both NUTS sampler and variational inference are provided. The package is structured for ease of use and the included demo shows the model execution on real-life as well as simulated datasets.
+Citation: <To Appear>
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Biarch: true
+Depends: 
+    R (>= 3.4.0)
+Imports: 
+    methods,
+    Rcpp (>= 0.12.0),
+    RcppParallel (>= 5.0.1),
+    rstan (>= 2.18.1),
+    rstantools (>= 2.1.1)
+LinkingTo: 
+    BH (>= 1.66.0),
+    Rcpp (>= 0.12.0),
+    RcppEigen (>= 0.3.3.3.0),
+    RcppParallel (>= 5.0.1),
+    rstan (>= 2.18.1),
+    StanHeaders (>= 2.18.0)
+SystemRequirements: GNU make
