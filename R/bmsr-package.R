@@ -13,5 +13,5 @@
 #' @references
 #' Brian S. White, Suleiman A. Khan, Mike J Mason, Muhammad Ammad-ud-din, Swapnil Potdar, Disha Malani, Heikki Kuusanmäki, Brian J. Druker, Caroline A Heckman, Olli Kallioniemi, Stephen E Kurtz, Kimmo Porkka, Cristina E. Tognon, Jeffrey W. Tyner, Tero Aittokallio, Krister Wennerberg, Justin Guinney,
 #' \emph{Bayesian multi-source regression and monocyte-associated gene expression predict BCL-2 inhibitor resistance in acute myeloid leukemia},
-#' <To Appear>, (2021)
+#' To Appear, (2021)
 NULL

@@ -7,7 +7,7 @@
 ztransform(mat, FFSC, verbose = FALSE)
 }
 \arguments{
-\item{mat}{matrix to z-transform}
+\item{mat}{matrix to z-transform.}
 
 \item{FFSC}{the index of first column to standardize. All columns including this and after are normalized.}
 
@@ -15,9 +15,9 @@ ztransform(mat, FFSC, verbose = FALSE)
 }
 \value{
 a list containing the following:
-\item{mat} column-wise z-transformed matrix.
-\item{cm} vector of column means used for z-transform.
-\item{cs} vector of column standard deviations used for z-transform.
+\item{mat}{column-wise z-transformed matrix,}
+\item{cm}{vector of column means used for z-transform,}
+\item{cs}{vector of column standard deviations used for z-transform.}
 }
 \description{
 \code{ztransform} performs column-wise mean=0 and sd=1 normalization of a matrix for all columns starting from \code{FFSC}

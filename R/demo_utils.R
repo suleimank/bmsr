@@ -9,8 +9,8 @@
 #' @param dY is a scaler representing the desired number of dimensions in Y (outputs). dY > 1 refers to multi-task datasets.
 #' @param ft is a scaler representing the desired number of active features in X.
 #' @return A list containing the following elements:
-#'  \item{data} which is a list containing the Y and X data matrices
-#'  \item{Beta} the beta parameters used to generate the data
+#'  \item{data}{which is a list containing the Y and X data matrices,}
+#'  \item{Beta}{the beta parameters used to generate the data.}
 #' @export
 generateSyntheticData <- function(  S = 2,
                               nY = c(40,80),

@@ -7,7 +7,7 @@
 meanNorm(mat, FFSC, verbose = FALSE)
 }
 \arguments{
-\item{mat}{matrix to mean normalize}
+\item{mat}{matrix to mean normalize.}
 
 \item{FFSC}{the index of first column to standardize. All columns including this and after are normalized.}
 
@@ -15,8 +15,8 @@ meanNorm(mat, FFSC, verbose = FALSE)
 }
 \value{
 a list containing the following:
-\item{mat} column-wise mean normalized matrix.
-\item{cm} vector of column means used for mean normalization.
+\item{mat}{column-wise mean normalized matrix,}
+\item{cm}{vector of column means used for mean normalization.}
 }
 \description{
 \code{meanNorm} performs column-wise mean=0 normalization of a matrix for all columns starting from \code{FFSC}

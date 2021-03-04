@@ -19,8 +19,8 @@ generateSyntheticData(S = 2, nY = c(40, 80), dX = 50, dY = 1, ft = 10)
 }
 \value{
 A list containing the following elements:
-\item{data} which is a list containing the Y and X data matrices
-\item{Beta} the beta parameters used to generate the data
+\item{data}{which is a list containing the Y and X data matrices,}
+\item{Beta}{the beta parameters used to generate the data.}
 }
 \description{
 \code{generateSyntheticData} simualtes random multi-source multi-task regression dataset.

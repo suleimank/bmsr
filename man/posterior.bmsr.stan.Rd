@@ -11,10 +11,10 @@ posterior.bmsr.stan(out)
 }
 \value{
 post is a list containing following posterior weights.
-\item{beta} matrix containing source specific beta parameters.
-\item{betaShared} vector of shared beta parameters common for all sources.
-\item{tau} global scaling factor learned.
-\item{sigma} noise parameter.
+\item{beta}{matrix containing source specific beta parameters,}
+\item{betaShared}{vector of shared beta parameters common for all sources,}
+\item{tau}{globalscaling factor learned,}
+\item{sigma}{noise parameter.}
 }
 \description{
 \code{posterior.bmsr.stan} extracts the posterior values from mode output.

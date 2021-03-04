@@ -7,7 +7,7 @@
 varNorm(mat, FFSC)
 }
 \arguments{
-\item{mat}{matrix to variance normalize normalize}
+\item{mat}{matrix to variance normalize normalize.}
 
 \item{FFSC}{the index of first column to standardize. All columns including this and after are normalized.}
 
@@ -15,8 +15,8 @@ varNorm(mat, FFSC)
 }
 \value{
 a list containing the following:
-\item{mat} column-wise variance normalized matrix.
-\item{cs} vector of column standard deviations used for variance normalization.
+\item{mat}{column-wise variance normalized matrix,}
+\item{cs}{vector of column standard deviations used for variance normalization.}
 }
 \description{
 \code{varNorm} performs column-wise standard-deviation=1 normalization of a matrix for all columns starting from \code{FFSC}

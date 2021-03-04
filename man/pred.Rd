@@ -4,7 +4,7 @@
 \alias{pred}
 \title{predict function for single source}
 \usage{
-pred(xTest.S, beta, W, yN)
+pred(xTest.S, beta, W, yN = NULL)
 }
 \arguments{
 \item{xTest.S}{is a matrix of test data for predicting the outcome.}
@@ -13,9 +13,9 @@ pred(xTest.S, beta, W, yN)
 
 \item{W}{are model parameters. If NULL, model is single/task, else multi/task.}
 
-\item{yN}{a list containing values used for normalizing the data: (default = NULL)
-\item{cm} vector of means with which the data is centered. 0's if data is not centered
-\item{cs} vector of standard deviations with which the data is scaled. 1's if data is not scaled.}
+\item{yN}{a list containing values used for normalizing the data: (default = NULL).
+\item{cm}{vector of means with which the data is centered (0's if data is not centered),}
+\item{cs}{vector of standard deviations with which the data is scaled (1's if data is not scaled).}}
 }
 \value{
 yPred prediction vector of the stan model.

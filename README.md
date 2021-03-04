@@ -1,19 +1,66 @@
 # Bayesian multi-source regression
 The bmsr package implements joint regression from multiple data sources in a Bayesian framework. The package provides implementation for both single-task and multi-task regression. The model is implemented using STAN and interface is provided using R programming language. Options for training the model using both NUTS sampler and variational inference are provided. The package is structured for ease of use and the included demo shows the model execution on real-life as well as simulated datasets.
 
+## Installation
+To install the package, run the following command in R:
+
+``` r
+devtools::install_github("suleimank/bmsr")
+```
+
+## Demo
+To run demo of Bayesian multi-source regression on simulated data, execute the following in R:
+
+``` r
+demo('demo_bmsr')
+```
+
+To run demo of Bayesian multi-task regression on simulated data, execute the following in R:
+
+``` r
+demo('demo_bmsmtr')
+```
+
+
+To run demo of Bayesian multi-source regression on real data from GDSC, and CCLE datasets obtained from PharmacoGx data, execute the following in R:
+
+``` r
+demo('demo_bmsr_lapatinib_gdsc_ccle')
+```
+
 ## Contents
 The repository contains the following:
 
+``` bash
+.
+├── R
+│   └── ...
+├── demo
+│   └── ...
+└── inst
+    └── stan
+	    └── ...
+```
+
+* Demo:
+	* Demo code to run the multi-source method on simulated data (./demo/demo_bmsr.R)
+	* Demo code to run the multi-task method on simulated data (./demo/demo_bmsmtr.R)
+	* Demo code to run the multi-source method on real data (./demo/demo_bmsr_lapatinib_gdsc_ccle.R)
+
 * BMSR: Bayesian multi-source regression
-	* STAN code for Bayesian multi-source regression (bmsr.stan)
-	* R script for training and predicting from the BMSR method (bmsr.stan)
-	* Demo code to run the method on simulated data (demo_bmsr.stan)
+	* STAN code for Bayesian multi-source regression (./inst/stan/bmsr.stan)
+	* R script for training and predicting from the BMSR method (./R/bmsr.R)
  
 * BMSMTR: Bayesian multi-source multi-task regression
-	* STAN code for Bayesian multi-source multi-task regression (bmsmtr.stan)
-	* R script for training and predicting from the BMSMTR method (bmsr.stan)
-	* Demo code to run the method on simulated data (demo_bmsmtr.stan)
+	* STAN code for Bayesian multi-source multi-task regression (./inst/stan/bmsmtr.stan)
+	* R script for training and predicting from the BMSMTR method (./R/bmsr.R)
+
+## Source Code
+To access a stand-alone repository with raw STAN and R source code, browse the [sourcecode](https://github.com/suleimank/bmsr-code).
 
 
 ## Citation
-Cite as: To Appear <citation information comes here>
+Cite as: 
+#' Brian S. White, Suleiman A. Khan, Mike J Mason, Muhammad Ammad-ud-din, Swapnil Potdar, Disha Malani, Heikki Kuusanmäki, Brian J. Druker, Caroline A Heckman, Olli Kallioniemi, Stephen E Kurtz, Kimmo Porkka, Cristina E. Tognon, Jeffrey W. Tyner, Tero Aittokallio, Krister Wennerberg, Justin Guinney,
+#' \emph{Bayesian multi-source regression and monocyte-associated gene expression predict BCL-2 inhibitor resistance in acute myeloid leukemia},
+#' To Appear, (2021)

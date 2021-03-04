@@ -26,13 +26,13 @@ na.omit.print <- function(x) { a = na.omit(x); print(a[1:nrow(a),]) }
 #'
 #' \code{ztransform} performs column-wise mean=0 and sd=1 normalization of a matrix for all columns starting from \code{FFSC}
 #'
-#' @param mat matrix to z-transform
+#' @param mat matrix to z-transform.
 #' @param FFSC the index of first column to standardize. All columns including this and after are normalized.
 #' @param verbose print logs or not. Defaults to FALSE.
 #' @return a list containing the following:
-#'  \item{mat} column-wise z-transformed matrix.
-#'  \item{cm} vector of column means used for z-transform.
-#'  \item{cs} vector of column standard deviations used for z-transform.
+#'  \item{mat}{column-wise z-transformed matrix,}
+#'  \item{cm}{vector of column means used for z-transform,}
+#'  \item{cs}{vector of column standard deviations used for z-transform.}
 #' @export
 ztransform <- function(mat, FFSC,verbose=FALSE){
   cmat = ncol(mat)
@@ -68,15 +68,15 @@ ztransform <- function(mat, FFSC,verbose=FALSE){
 #'
 #' \code{ztransformTest} performs column-wise mean=0 and sd=1 normalization of a test matrix for all columns starting from \code{FFSC}
 #'
-#' @param mat matrix to z-transform
+#' @param mat matrix to z-transform.
 #' @param FFSC the index of first column to standardize. All columns including this and after are normalized.
 #' @param cm vector of column means used for z-transform.
 #' @param cs vector of column standard deviations used for z-transform.
 #' @param verbose print logs or not. Defaults to FALSE.
 #' @return a list containing the following:
-#'  \item{mat} column-wise z-transformed matrix.
-#'  \item{cm} vector of column means used for z-transform.
-#'  \item{cs} vector of column standard deviations used for z-transform.
+#'  \item{mat}{column-wise z-transformed matrix,}
+#'  \item{cm}{vector of column means used for z-transform,}
+#'  \item{cs}{vector of column standard deviations used for z-transform.}
 #' @export
 ztransformTest <- function(mat, FFSC, cm, cs, verbose=FALSE){
   cmat = ncol(mat)
@@ -98,12 +98,12 @@ ztransformTest <- function(mat, FFSC, cm, cs, verbose=FALSE){
 #'
 #' \code{meanNorm} performs column-wise mean=0 normalization of a matrix for all columns starting from \code{FFSC}
 #'
-#' @param mat matrix to mean normalize
+#' @param mat matrix to mean normalize.
 #' @param FFSC the index of first column to standardize. All columns including this and after are normalized.
 #' @param verbose print logs or not. Defaults to FALSE.
 #' @return a list containing the following:
-#'  \item{mat} column-wise mean normalized matrix.
-#'  \item{cm} vector of column means used for mean normalization.
+#'  \item{mat}{column-wise mean normalized matrix,}
+#'  \item{cm}{vector of column means used for mean normalization.}
 #' @keywords internal
 meanNorm <- function(mat, FFSC,verbose=FALSE){
   cmat = ncol(mat)
@@ -130,12 +130,12 @@ meanNorm <- function(mat, FFSC,verbose=FALSE){
 #'
 #' \code{varNorm} performs column-wise standard-deviation=1 normalization of a matrix for all columns starting from \code{FFSC}
 #'
-#' @param mat matrix to variance normalize normalize
+#' @param mat matrix to variance normalize normalize.
 #' @param FFSC the index of first column to standardize. All columns including this and after are normalized.
 #' @param verbose print logs or not. Defaults to FALSE.
 #' @return a list containing the following:
-#'  \item{mat} column-wise variance normalized matrix.
-#'  \item{cs} vector of column standard deviations used for variance normalization.
+#'  \item{mat}{column-wise variance normalized matrix,}
+#'  \item{cs}{vector of column standard deviations used for variance normalization.}
 #' @keywords internal
 varNorm <- function(mat, FFSC){
   cmat = ncol(mat)

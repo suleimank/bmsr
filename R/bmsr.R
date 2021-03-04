@@ -7,14 +7,14 @@ require("rstan")
 #'
 #'
 #' @param file is the stan file containing the stan code.
-#' @param data is a list containing the data in the format this stan code accepts
+#' @param data is a list containing the data in the format this stan code accepts.
 #' @param opts a list containing opts to run the model:
-#'  \item{iter} integer identifies number of sampling iterations
-#'  \item{seeds} vector of integers identifying seeds for running the method
-#'  \item{inference} string identifying the sampling method to use, either of Sampling or VB
+#'  \item{iter}{integer identifies number of sampling iterations,}
+#'  \item{seeds}{vector of integers identifying seeds for running the method,}
+#'  \item{inference}{string identifying the sampling method to use, either of Sampling or VB.}
 #' @return A list containing the following elements:
-#'  \item{out} STAN output variable
-#'  \item{runtime} run time of the code.
+#'  \item{out}{STAN output variable,}
+#'  \item{runtime}{run time of the code.}
 #' @export
 runSTAN <- function(file,data,opts)
 {
@@ -69,10 +69,10 @@ runSTAN <- function(file,data,opts)
 #' @param predFunction is a function for predicting y's using the outcome of stan run.
 #' @param xTest is a matrix of test data for predicting the outcome. If NULL no prediction is made (default).
 #' @param nTest is a vector of length S, containing the number of values in each source. Can contain zero's.
-#' @param yN a list containing values used for normalizing the data: (default = NULL)
-#'  \item{cm} vector of means with which the data is centered. 0's if data is not centered
-#'  \item{cs} vector of standard deviations with which the data is scaled. 1's if data is not scaled.
-#' @return yPred prediction vector of the stan model.
+#' @param yN a list containing values used for normalizing the data: (default = NULL).
+#'  \item{cm}{vector of means with which the data is centered (0's if data is not centered),}
+#'  \item{cs}{vector of standard deviations with which the data is scaled (1's if data is not scaled).}
+#' @return yPred prediction vector of the stan model
 #' @export
 predictSTAN <- function(predFunction,out,xTest,nTest,yN=NULL){
   yPred = NA;
@@ -88,12 +88,12 @@ predictSTAN <- function(predFunction,out,xTest,nTest,yN=NULL){
 #' @param xTest.S is a matrix of test data for predicting the outcome.
 #' @param beta is model parameter vector.
 #' @param W are model parameters. If NULL, model is single/task, else multi/task.
-#' @param yN a list containing values used for normalizing the data: (default = NULL)
-#'  \item{cm} vector of means with which the data is centered. 0's if data is not centered
-#'  \item{cs} vector of standard deviations with which the data is scaled. 1's if data is not scaled.
+#' @param yN a list containing values used for normalizing the data: (default = NULL).
+#'  \item{cm}{vector of means with which the data is centered (0's if data is not centered),}
+#'  \item{cs}{vector of standard deviations with which the data is scaled (1's if data is not scaled).}
 #' @return yPred prediction vector of the stan model.
 #' @keywords internal
-pred <- function(xTest.S,beta,W,yN)
+pred <- function(xTest.S,beta,W,yN=NULL)
 {
   if(length(W)>0)
     ynew = (xTest.S %*% t(beta) %*% W / nrow(W))
@@ -118,9 +118,9 @@ pred <- function(xTest.S,beta,W,yN)
 #' @param out is trained STAN model.
 #' @param xTest is a matrix of test data for predicting the outcome. If NULL no prediction is made (default).
 #' @param nTest is a vector of length S, containing the number of values in each source. Can contain zero's.
-#' @param yN a list containing values used for normalizing the data: (default = NULL)
-#'  \item{cm} vector of means with which the data is centered. 0's if data is not centered
-#'  \item{cs} vector of standard deviations with which the data is scaled. 1's if data is not scaled.
+#' @param yN a list containing values used for normalizing the data: (default = NULL).
+#'  \item{cm}{vector of means with which the data is centered (0's if data is not centered),}
+#'  \item{cs}{vector of standard deviations with which the data is scaled (1's if data is not scaled).}
 #' @return yPred prediction vector of the bmsr model.
 #' @export
 predict.bmsr.stan <- function(out, xTest, nTest, yN=NULL)
@@ -147,9 +147,9 @@ predict.bmsr.stan <- function(out, xTest, nTest, yN=NULL)
 #' @param out is trained STAN model.
 #' @param xTest is a matrix of test data for predicting the outcome. If NULL no prediction is made (default).
 #' @param nTest is a vector of length S, containing the number of values in each source. Can contain zero's.
-#' @param yN a list containing values used for normalizing the data: (default = NULL)
-#'  \item{cm} vector of means with which the data is centered. 0's if data is not centered
-#'  \item{cs} vector of standard deviations with which the data is scaled. 1's if data is not scaled.
+#' @param yN a list containing values used for normalizing the data: (default = NULL).
+#'  \item{cm}{vector of means with which the data is centered, (0's if data is not centered),}
+#'  \item{cs}{vector of standard deviations with which the data is scaled (1's if data is not scaled).}
 #' @return yPred prediction vector of the bmsmtr model.
 #' @export
 predict.bmsmtr.stan <- function(out, xTest, nTest, yN=NULL)
@@ -192,10 +192,10 @@ getPosterior <- function(file=NULL,out)
 #'
 #' @param out is trained STAN model.
 #' @return post is a list containing following posterior weights.
-#'  \item{beta} matrix containing source specific beta parameters.
-#'  \item{betaShared} vector of shared beta parameters common for all sources.
-#'  \item{tau} global scaling factor learned.
-#'  \item{sigma} noise parameter.
+#'  \item{beta}{matrix containing source specific beta parameters,}
+#'  \item{betaShared}{vector of shared beta parameters common for all sources,}
+#'  \item{tau}{globalscaling factor learned,}
+#'  \item{sigma}{noise parameter.}
 #' @export
 posterior.bmsr.stan <- function(out)
 {
@@ -224,10 +224,10 @@ posterior.bmsr.stan <- function(out)
 #'
 #' @param out is trained STAN model.
 #' @return post is a list containing following posterior weights.
-#'  \item{beta} matrix containing source specific beta parameters.
-#'  \item{W} matrix of multi-task parameters.
-#'  \item{tau} global scaling factor learned.
-#'  \item{sigma} noise parameter.
+#'  \item{beta}{matrix containing source specific beta parameters,}
+#'  \item{W}{matrix of multi-task parameters,}
+#'  \item{tau}{global scaling factor learned,}
+#'  \item{sigma}{noise parameter.}
 #' @export
 posterior.bmsmtr.stan <- function(out)
 {

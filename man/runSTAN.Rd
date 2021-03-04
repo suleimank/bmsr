@@ -9,17 +9,17 @@ runSTAN(file, data, opts)
 \arguments{
 \item{file}{is the stan file containing the stan code.}
 
-\item{data}{is a list containing the data in the format this stan code accepts}
+\item{data}{is a list containing the data in the format this stan code accepts.}
 
 \item{opts}{a list containing opts to run the model:
-\item{iter} integer identifies number of sampling iterations
-\item{seeds} vector of integers identifying seeds for running the method
-\item{inference} string identifying the sampling method to use, either of Sampling or VB}
+\item{iter}{integer identifies number of sampling iterations,}
+\item{seeds}{vector of integers identifying seeds for running the method,}
+\item{inference}{string identifying the sampling method to use, either of Sampling or VB.}}
 }
 \value{
 A list containing the following elements:
-\item{out} STAN output variable
-\item{runtime} run time of the code.
+\item{out}{STAN output variable,}
+\item{runtime}{run time of the code.}
 }
 \description{
 \code{runSTAN} runs a stan regression model and predicts the values for the test samples.

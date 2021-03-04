@@ -11,10 +11,10 @@ posterior.bmsmtr.stan(out)
 }
 \value{
 post is a list containing following posterior weights.
-\item{beta} matrix containing source specific beta parameters.
-\item{W} matrix of multi-task parameters.
-\item{tau} global scaling factor learned.
-\item{sigma} noise parameter.
+\item{beta}{matrix containing source specific beta parameters,}
+\item{W}{matrix of multi-task parameters,}
+\item{tau}{global scaling factor learned,}
+\item{sigma}{noise parameter.}
 }
 \description{
 \code{getPosterior} extracts the posterior values from mode output.
