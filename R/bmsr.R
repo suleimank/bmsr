@@ -70,8 +70,10 @@ runSTAN <- function(file,data,opts)
 #' @param xTest is a matrix of test data for predicting the outcome. If NULL no prediction is made (default).
 #' @param nTest is a vector of length S, containing the number of values in each source. Can contain zero's.
 #' @param yN a list containing values used for normalizing the data: (default = NULL).
+#' \itemize{
 #'  \item{cm}{vector of means with which the data is centered (0's if data is not centered),}
 #'  \item{cs}{vector of standard deviations with which the data is scaled (1's if data is not scaled).}
+#'  }
 #' @return yPred prediction vector of the stan model
 #' @export
 predictSTAN <- function(predFunction,out,xTest,nTest,yN=NULL){
@@ -121,8 +123,10 @@ pred <- function(xTest.S,beta,W,yN=NULL)
 #' @param xTest is a matrix of test data for predicting the outcome. If NULL no prediction is made (default).
 #' @param nTest is a vector of length S, containing the number of values in each source. Can contain zero's.
 #' @param yN a list containing values used for normalizing the data: (default = NULL).
+#' \itemize{
 #'  \item{cm}{vector of means with which the data is centered (0's if data is not centered),}
 #'  \item{cs}{vector of standard deviations with which the data is scaled (1's if data is not scaled).}
+#'  }
 #' @return yPred prediction vector of the bmsr model.
 #' @export
 predict.bmsr.stan <- function(out, xTest, nTest, yN=NULL)
@@ -150,8 +154,10 @@ predict.bmsr.stan <- function(out, xTest, nTest, yN=NULL)
 #' @param xTest is a matrix of test data for predicting the outcome. If NULL no prediction is made (default).
 #' @param nTest is a vector of length S, containing the number of values in each source. Can contain zero's.
 #' @param yN a list containing values used for normalizing the data: (default = NULL).
+#' \itemize{
 #'  \item{cm}{vector of means with which the data is centered, (0's if data is not centered),}
 #'  \item{cs}{vector of standard deviations with which the data is scaled (1's if data is not scaled).}
+#'  }
 #' @return yPred prediction vector of the bmsmtr model.
 #' @export
 predict.bmsmtr.stan <- function(out, xTest, nTest, yN=NULL)
