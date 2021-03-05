@@ -37,9 +37,10 @@ num.processes <- num.cores - 1
 ## Following is for rstan
 options(mc.cores = num.processes)
 
-source("bmsr.R")
-source("bmsr_wrappers.R")
-source("dataset_utils.R")
+#source("bmsr.R")
+#source("bmsr_wrappers.R")
+#source("dataset_utils.R")
+require(bmsr)
 
 model.file = "bmsr.stan";
 mssr.model = rstan::stan_model(file=model.file)
@@ -188,5 +189,5 @@ g <- g + theme(text = element_text(size = 15))
 g <- g + geom_text_repel(data = df.outlier, aes(x = OHSU, y = Tavor, label = gene))
 
 g
-ggsave("bmsr-venetoclax-tavor-ohsu-coefficients.pdf")
-ggsave("bmsr-venetoclax-tavor-ohsu-coefficients.png")
+ggsave("demo_bmsr_venetoclax_tavor_ohsu.pdf")
+ggsave("demo_bmsr_venetoclax_tavor_ohsu.png")
