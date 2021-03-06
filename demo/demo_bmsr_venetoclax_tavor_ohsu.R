@@ -37,13 +37,9 @@ num.processes <- num.cores - 1
 ## Following is for rstan
 options(mc.cores = num.processes)
 
-#source("bmsr.R")
-#source("bmsr_wrappers.R")
-#source("dataset_utils.R")
 require(bmsr)
 
 model.file = "bmsr.stan";
-mssr.model = rstan::stan_model(file=model.file)
 
 # Download the PSets for OHSU/Beat AML and Tavor from ORCESTRA
 # We will then access these PSets through PharmacoGx functions
