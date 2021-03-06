@@ -295,6 +295,7 @@ demo_bmsr_venetoclax_tavor_ohsu <- function() {
 
   # Let's limit to genes that are highly expressed and highly variable in AML
   file <- "aml-highly-expressed-variable-genes.tsv"
+  file <- system.file("extdata", file, package = "bmsr")
   aml.genes <- read.table(file, sep="\t", header=TRUE, as.is=TRUE)$gene
   translation.tbl <- subset(translation.tbl, ensg %in% aml.genes)
 

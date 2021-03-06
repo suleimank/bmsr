@@ -39,5 +39,5 @@ options(mc.cores = num.processes)
 
 require(bmsr)
 
-demo_bmsr_venetoclax_tavor_ohsu()
+bmsr:::demo_bmsr_venetoclax_tavor_ohsu()
 
