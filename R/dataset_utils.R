@@ -1,3 +1,9 @@
+#' Download PharmacoGx-compatible PSets (i.e., URL-linked RDS files)
+#'
+#' \code{download.psets} trains bmsmtr on random multi-source multi-task regression dataset.
+#'
+#' @param pset.links a named list of URLs to PSets, i.e., list(dataset1 = url1, dataset2 = url2, etc.)
+#'
 download.psets <- function(pset.links) {
   nms <- names(pset.links)
   names(nms) <- nms
