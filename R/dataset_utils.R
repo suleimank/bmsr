@@ -1,3 +1,19 @@
+download.psets <- function(pset.links) {
+  nms <- names(pset.links)
+  names(nms) <- nms
+  llply(nms,
+        .fun = function(nm) {
+                 # This line will do it all in one go ...           
+                 # readRDS(url(pset.links[[nm]], "rb"))
+                 # But, instead, download explicitly so we have a local cache of the datasets
+                 destfile <- paste0(nm, ".rds")
+                 if(!file.exists(destfile)) {
+                   download.file(pset.links[[nm]], destfile)
+                 }
+                 readRDS(destfile)
+               })
+}
+
 download.and.prepare.datasets <- function() {
 
   # Download GDSC and CCLE data
