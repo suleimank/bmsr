@@ -80,7 +80,7 @@ To Appear, (2021)
 
 ## References
 
-Anthony Mammoliti, Petr Smirnov, Minoru Nakano, Zhaleh Safikhani, Chantal Ho, Gangesh Beri, Benjamin Haibe-Kains, __ORCESTRA: a platform for orchestrating and sharing high-throughput pharmacogenomic analyses__, BioRxiv
+Anthony Mammoliti, Petr Smirnov, Minoru Nakano, Zhaleh Safikhani, Chantal Ho, Gangesh Beri, Benjamin Haibe-Kains, __ORCESTRA: a platform for orchestrating and sharing high-throughput pharmacogenomic analyses__, BioRxiv, https://doi.org/10.1101/2020.09.18.303842
 
 Petr Smirnov, Zhaleh Safikhani, Nehme El-Hachem, Dong Wang, Adrian She, Catharina Olsen, Mark Freeman, Heather Selby, Deena M A Gendoo, Patrick Grossmann, Andrew H Beck, Hugo J W L Aerts, Mathieu Lupien, Anna Goldenberg, Benjamin Haibe-Kains, 2016. __PharmacoGx: An R Package for Analysis of Large Pharmacogenomic Datasets__, Bioinformatics  32 (8): 1244–46.
 
